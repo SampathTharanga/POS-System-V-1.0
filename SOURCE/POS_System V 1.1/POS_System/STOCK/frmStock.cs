@@ -71,7 +71,7 @@ namespace POS_System
         {
             try
             {
-                if (lblItemNo.Text != "" && txtQty.Text != "" && int.Parse(txtQty.Text)!=0 && txtUnitPrice.Text != "" &&    decimal.Parse(txtUnitPrice.Text) != 0.00M)
+                if (lblItemNo.Text != "" && txtQty.Text != "" && txtUnitPrice.Text != "" &&    decimal.Parse(txtUnitPrice.Text) != 0.00M)
                 {
                     //NEW ITEMS ADD IN THE STOCK
                     if (btnAdd.Text == "Add")

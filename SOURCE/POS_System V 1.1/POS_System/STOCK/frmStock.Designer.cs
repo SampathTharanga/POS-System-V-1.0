@@ -44,8 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picAoubt = new System.Windows.Forms.PictureBox();
+            this.picHelp = new System.Windows.Forms.PictureBox();
+            this.picCancel = new System.Windows.Forms.PictureBox();
+            this.picBoxClose = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,16 +64,11 @@
             this.lblItemNo = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.picAoubt = new System.Windows.Forms.PictureBox();
-            this.picHelp = new System.Windows.Forms.PictureBox();
-            this.picCancel = new System.Windows.Forms.PictureBox();
-            this.picBoxClose = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAoubt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCancel)).BeginInit();
@@ -242,6 +242,16 @@
             this.panel2.Size = new System.Drawing.Size(71, 299);
             this.panel2.TabIndex = 4;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(3, 221);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(65, 72);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 38;
+            this.pictureBox11.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -270,6 +280,54 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(77, 700);
             this.panel1.TabIndex = 35;
+            // 
+            // picAoubt
+            // 
+            this.picAoubt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picAoubt.Image = global::POS_System.Properties.Resources.About;
+            this.picAoubt.Location = new System.Drawing.Point(12, 300);
+            this.picAoubt.Name = "picAoubt";
+            this.picAoubt.Size = new System.Drawing.Size(54, 53);
+            this.picAoubt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAoubt.TabIndex = 3;
+            this.picAoubt.TabStop = false;
+            this.picAoubt.Click += new System.EventHandler(this.picAoubt_Click);
+            // 
+            // picHelp
+            // 
+            this.picHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picHelp.Image = global::POS_System.Properties.Resources.Help;
+            this.picHelp.Location = new System.Drawing.Point(12, 204);
+            this.picHelp.Name = "picHelp";
+            this.picHelp.Size = new System.Drawing.Size(54, 53);
+            this.picHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHelp.TabIndex = 2;
+            this.picHelp.TabStop = false;
+            this.picHelp.Click += new System.EventHandler(this.picHelp_Click);
+            // 
+            // picCancel
+            // 
+            this.picCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCancel.Image = global::POS_System.Properties.Resources.Close;
+            this.picCancel.Location = new System.Drawing.Point(12, 109);
+            this.picCancel.Name = "picCancel";
+            this.picCancel.Size = new System.Drawing.Size(54, 53);
+            this.picCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCancel.TabIndex = 1;
+            this.picCancel.TabStop = false;
+            this.picCancel.Click += new System.EventHandler(this.picCancel_Click);
+            // 
+            // picBoxClose
+            // 
+            this.picBoxClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBoxClose.Image = global::POS_System.Properties.Resources.Back_Arrow_96px;
+            this.picBoxClose.Location = new System.Drawing.Point(11, 15);
+            this.picBoxClose.Name = "picBoxClose";
+            this.picBoxClose.Size = new System.Drawing.Size(54, 53);
+            this.picBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxClose.TabIndex = 0;
+            this.picBoxClose.TabStop = false;
+            this.picBoxClose.Click += new System.EventHandler(this.picBoxClose_Click);
             // 
             // label11
             // 
@@ -306,7 +364,6 @@
             // 
             // txtDecsription
             // 
-            this.txtDecsription.Enabled = false;
             this.txtDecsription.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDecsription.Location = new System.Drawing.Point(288, 164);
             this.txtDecsription.MaxLength = 43;
@@ -416,64 +473,6 @@
             this.label17.TabIndex = 52;
             this.label17.Text = "You can add new items always. But you can\'t remove it. You can Update only.";
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(3, 221);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(65, 72);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 38;
-            this.pictureBox11.TabStop = false;
-            // 
-            // picAoubt
-            // 
-            this.picAoubt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAoubt.Image = global::POS_System.Properties.Resources.About;
-            this.picAoubt.Location = new System.Drawing.Point(12, 300);
-            this.picAoubt.Name = "picAoubt";
-            this.picAoubt.Size = new System.Drawing.Size(54, 53);
-            this.picAoubt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAoubt.TabIndex = 3;
-            this.picAoubt.TabStop = false;
-            this.picAoubt.Click += new System.EventHandler(this.picAoubt_Click);
-            // 
-            // picHelp
-            // 
-            this.picHelp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picHelp.Image = global::POS_System.Properties.Resources.Help;
-            this.picHelp.Location = new System.Drawing.Point(12, 204);
-            this.picHelp.Name = "picHelp";
-            this.picHelp.Size = new System.Drawing.Size(54, 53);
-            this.picHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picHelp.TabIndex = 2;
-            this.picHelp.TabStop = false;
-            this.picHelp.Click += new System.EventHandler(this.picHelp_Click);
-            // 
-            // picCancel
-            // 
-            this.picCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCancel.Image = global::POS_System.Properties.Resources.Close;
-            this.picCancel.Location = new System.Drawing.Point(12, 109);
-            this.picCancel.Name = "picCancel";
-            this.picCancel.Size = new System.Drawing.Size(54, 53);
-            this.picCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCancel.TabIndex = 1;
-            this.picCancel.TabStop = false;
-            this.picCancel.Click += new System.EventHandler(this.picCancel_Click);
-            // 
-            // picBoxClose
-            // 
-            this.picBoxClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBoxClose.Image = global::POS_System.Properties.Resources.Back_Arrow_96px;
-            this.picBoxClose.Location = new System.Drawing.Point(11, 15);
-            this.picBoxClose.Name = "picBoxClose";
-            this.picBoxClose.Size = new System.Drawing.Size(54, 53);
-            this.picBoxClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxClose.TabIndex = 0;
-            this.picBoxClose.TabStop = false;
-            this.picBoxClose.Click += new System.EventHandler(this.picBoxClose_Click);
-            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.Crimson;
@@ -521,9 +520,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAoubt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCancel)).EndInit();
